@@ -5,7 +5,7 @@ class AOSW < Oxidized::Model
   # Also Dell controllers
 
   comment  '# '
-  prompt /^\([^)]+\) [#>]/
+  prompt /^([\w.@-]+\s?[#>]\s?)$/
 
   cmd :all do |cfg|
     cfg.each_line.to_a[1..-2].join
